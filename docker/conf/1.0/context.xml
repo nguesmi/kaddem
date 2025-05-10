@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context>
+<Resource auth="Container" maxIdle="10" testOnBorrow="true" maxActive="50" validationQuery="select 1" driverClassName="org.postgresql.Driver" factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" name="jdbc/fluidcore_DataSource" password="${DB_PASSWORD}" type="javax.sql.DataSource" uniqueName="jdbc/fluidcore_DataSource" url="jdbc:postgresql://${DB_HOST}:${DB_PORT}/${SCHEMA}" username="${DB_USERNAME}" removeAbandoned="true" removeAbandonedTimeout="60"/>
+<Resource auth="Container" maxIdle="10" testOnBorrow="true" maxActive="50" validationQuery="select 1" driverClassName="org.postgresql.Driver" factory="org.apache.tomcat.jdbc.pool.DataSourceFactory" name="jdbc/fluidcore_securityStore" password="${DB_PASSWORD}" type="javax.sql.DataSource" uniqueName="jdbc/fluidcore_securityStore" url="jdbc:postgresql://${DB_HOST}:${DB_PORT}/${SCHEMA}" username="${DB_USERNAME}" removeAbandoned="true" removeAbandonedTimeout="60"/>
+</Context>

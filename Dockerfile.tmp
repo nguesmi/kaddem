@@ -1,0 +1,21 @@
+ARG DOCKIMGVER
+#FROM 191081100425.dkr.ecr.eu-west-1.amazonaws.com/middleware/tomcat:$DOCKIMGVER
+FROM 711831615728.dkr.ecr.eu-west-1.amazonaws.com/fluid/ms/jdk:17
+ARG   RELEASEVERSION
+ARG   COMPONENTNAME
+ARG   WORKING_FOLDER
+ARG   ARTIFACT_NAME
+ARG   PACKAGING
+ARG CONTEXTPATH
+
+#UPLOAD_CONFIG_FILE
+User root
+COPY --chown=vermeg:vermeg  docker/startup/$RELEASEVERSION/start.sh /opt/tools/tomcat/bin/run.sh.tmp
+COPY --chown=vermeg:vermeg  docker/conf/$RELEASEVERSION/*   /opt/tools/tomcat/conf/
+COPY --chown=vermeg:vermeg  $COMPONENTNAME/target/$ARTIFACT_NAME /opt/tools/tomcat/webapps/$CONTEXTPATH.$PACKAGING
+#WORKING_FOLDER
+
+RUN ["/bin/bash", "-c", "/bin/cat /opt/tools/tomcat/bin/run.sh.tmp > /opt/tools/tomcat/bin/run.sh"]
+
+ENTRYPOINT ["/opt/tools/tomcat/bin/run.sh"]
+

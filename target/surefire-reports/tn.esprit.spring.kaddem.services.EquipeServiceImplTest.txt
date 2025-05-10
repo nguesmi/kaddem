@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: tn.esprit.spring.kaddem.services.EquipeServiceImplTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.034 s <<< FAILURE! - in tn.esprit.spring.kaddem.services.EquipeServiceImplTest
+evoluerEquipes_shouldUpgradeEquipeLevelWhenConditionsMet  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.ClassCastException: class java.util.Arrays$ArrayList cannot be cast to class java.util.Set (java.util.Arrays$ArrayList and java.util.Set are in module java.base of loader 'bootstrap')
+	at tn.esprit.spring.kaddem.services.EquipeServiceImplTest.evoluerEquipes_shouldUpgradeEquipeLevelWhenConditionsMet(EquipeServiceImplTest.java:103)
+
