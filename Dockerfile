@@ -1,12 +1,6 @@
 FROM openjdk:17-jdk-alpine
-ARG   RELEASEVERSION
-ARG   COMPONENTNAME
-ARG   WORKING_FOLDER
-ARG   ARTIFACT_NAME
-ARG   PACKAGING
-ARG CONTEXTPATH
 VOLUME /tmp
 ARG JAR_FILE=target/*.jar
-COPY  $COMPONENTNAME/target/$ARTIFACT_NAME app.jar
+COPY  target/JAR_FILE app.jar
 #COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
