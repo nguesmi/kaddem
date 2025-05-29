@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: tn.esprit.spring.kaddem.services.ContratServiceImplTest
--------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.76 s <<< FAILURE! - in tn.esprit.spring.kaddem.services.ContratServiceImplTest
-retrieveAndUpdateStatusContrat_shouldArchiveIfNeeded  Time elapsed: 0.703 s  <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because "contrats15j" is null
-	at tn.esprit.spring.kaddem.services.ContratServiceImplTest.retrieveAndUpdateStatusContrat_shouldArchiveIfNeeded(ContratServiceImplTest.java:117)
-
